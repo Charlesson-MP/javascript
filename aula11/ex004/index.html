@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Onde você mora:
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" id="btn">
+    <div></div>
+    <script>
+        var btn = window.document.querySelector('input#btn')
+        btn.addEventListener('click', verificar)
+
+        function verificar() {
+            var txtpais = window.document.querySelector('input#txtpais')
+
+            var pais = txtpais.value
+
+            var res = window.document.querySelector('div')
+
+            res.innerHTML = `<p>Vivendo em ${pais}</p>`
+
+            if(pais == 'Brasil') {
+                res.innerHTML += '<p>Brasileiro</p>'
+            }else {
+                res.innerHTML += '<p>Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
